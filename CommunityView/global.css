@@ -1,0 +1,37 @@
+:root {
+  --background-main: #aeaeae;
+  --background-card: #d9d9d9;
+  --text-primary: #484848;
+  --text-secondary: #49454f;
+  --black: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.community-app-container {
+  max-width: 402px;
+  width: 100%;
+  height: 874px;
+  background-color: var(--background-main);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
