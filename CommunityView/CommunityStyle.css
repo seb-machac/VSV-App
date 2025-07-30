@@ -1,0 +1,202 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 77px 12px 0 11px;
+  flex-shrink: 0;
+}
+
+.search-bar {
+  flex-grow: 1;
+  height: 72px;
+  background-color: var(--background-card);
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  padding: 0 4px 0 16px; /* Adjusted based on figma layout */
+}
+
+.search-text {
+  flex-grow: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-left: 8px; /* Approximate spacing */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-button img {
+  width: 73px;
+  height: 73px;
+}
+
+/* CSS for section section:main */
+.content-feed {
+  flex-grow: 1;
+  padding: 44px 28px 20px; /* Top padding calculated, side/bottom are estimates for scroll */
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  overflow-y: auto;
+}
+
+.content-card {
+  background-color: var(--background-card);
+  border-radius: 25px;
+  padding: 9px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.card-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.card-body {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.75px;
+}
+
+/* CSS for section section:footer */
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.nav-bar-container {
+  position: relative;
+  height: 106px; /* From group 15:22 */
+  padding: 0 17px; /* Approximate from icon positions */
+}
+
+.nav-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px; /* Approximate for icon spacing */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item img {
+  display: block;
+}
+
+.community-item {
+  position: relative;
+  width: 81px;
+  height: 81px;
+  transform: translateY(-30px); /* Lifts the icon up */
+}
+
+.community-item .community-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.community-item .community-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+
+.home-indicator-container {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-indicator {
+  width: 144px;
+  height: 5px;
+  background-color: var(--black);
+  border-radius: 100px;
+}
+
+@media (max-width: 420px) {
+  .community-app-container {
+    height: 100vh;
+    height: 100dvh;
+    border-radius: 0;
+  }
+}
+:root {
+  --background-main: #aeaeae;
+  --background-card: #d9d9d9;
+  --text-primary: #484848;
+  --text-secondary: #49454f;
+  --black: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.community-app-container {
+  max-width: 402px;
+  width: 100%;
+  height: 874px;
+  background-color: var(--background-main);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
