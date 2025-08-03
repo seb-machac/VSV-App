@@ -14,6 +14,7 @@
   <script src="/CommunityView/CommunityScript.js" defer></script>
 </head>
 <body>
+  <section class="community-view">
 <header id="section-header" class="app-header">
   <div class="search-bar">
     <button class="icon-button">
@@ -24,7 +25,7 @@
       <img src="/CommunityView/images/Search.png" alt="Search Icon">
     </button>
   </div>
-  <button class="icon-button account-button">
+  <button class="icon-button">
     <img src="/CommunityView/images/Account.png" alt="Account Icon">
   </button>
 </header>
@@ -42,25 +43,28 @@
     <p class="card-body">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam......</p>
   </article>
 </main>
-<footer id="section-footer" class="app-footer">
-  <div class="nav-bar-container">
-    <img src="/MapView/images/Subtract.png" alt="">
-    <nav class="nav-bar">
-      <a href="/Pages/Browser.html" class="nav-item">
-        <img src="/CommunityView/images/Browser.png" alt="Browse">
-      </a>
-      <a href="/Pages/Map.html" class="nav-item">
-        <img src="/CommunityView/images/Map.png" alt="Map">
-      </a>
+<footer class="bottom-bar">
       <!--merged image-->
-      <a href="/Pages/Community.html" class="nav-item community-item">
-        <img class="community-icon" src="/CommunityView/images/CommunitySelected.svg" alt="Community">
-      </a>
-    </nav>
-  </div>
-  <div class="home-indicator-container">
-    <div class="home-indicator"></div>
-  </div>
-</footer>
+      <div class="nav-background-shape">
+        <!-- This div represents the gray navigation bar background (node 11:13) -->
+        <!-- The notch effect is created by the central button overlapping it from above -->
+         <img src="/MapView/images/Subtract.png" alt="nav-bar">
+      </div>
+      <nav class="main-nav">
+        <a href="/Pages/Browser.html" class="nav-link">
+          <img src="/MapView/images/BrowserIcon.svg" alt="Browse">
+        </a>
+        <a href="/Pages/Map.html" class="nav-link">
+          <div>
+            <img src="/CommunityView/images/Map.svg" alt="Map" class="nav-link">
+          </div>
+        </a>
+        <a href="/Pages/Community.html" class="nav-link nav-selected">
+          <img src="/CommunityView/images/CommunitySelected.svg" class="CommunityIcon" alt="Community">
+          <img src="/CommunityView/images/11_17.png"  alt="Community BG">
+        </a>
+      </nav>
+    </footer>
+</section>
 </body>
 </html>

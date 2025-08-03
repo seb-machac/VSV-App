@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #E5E5E5; /* A neutral background to highlight the component */
+  background-color: #a16d6d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,8 @@ body {
     background-color: #d9d9d9;
     border-radius: 28px;
     padding: 10px 16px;
-    height: 43px;
+    height: 72px;
+    transform: translate(0px, -10px);
   }
 
   .search-icon {

@@ -37,11 +37,13 @@
   justify-content: center;
 }
 
-.account-button img {
-  width: 73px;
-  height: 73px;
+.community-view {
+    width: 402px;
+    max-width: 100%;
+    position: relative;
+    background-color: #aeaeae;
+    height: 874px;
 }
-
 /* CSS for section section:main */
 .content-feed {
   flex-grow: 1;
@@ -83,77 +85,50 @@
 }
 
 /* CSS for section section:footer */
-.app-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  flex-shrink: 0;
-}
 
-.nav-bar-container {
-  position: relative;
-  height: 106px; /* From group 15:22 */
-  padding: 0 17px; /* Approximate from icon positions */
-}
-
-.nav-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 76px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 35px; /* Approximate for icon spacing */
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .nav-item img {
   display: block;
+  transform: translate(0px, -10px);
 }
 
-.community-item {
-  position: relative;
-  width: 81px;
-  height: 81px;
-  transform: translateY(-30px); /* Lifts the icon up */
-}
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 106px;
+    z-index: 10;
+  }
 
-.community-item .community-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+.nav-background-shape {
+    position: absolute;
+    bottom: 0px; /* Height of home indicator area */
+    translate: 2px 5px;
+  }
 
-.community-item .community-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.7;
-}
+.main-nav {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    right: 0;
+    height: 72px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+  }
 
-.home-indicator-container {
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 81px;
+    height: 81px;
+  }
 
-.home-indicator {
-  width: 144px;
-  height: 5px;
-  background-color: var(--black);
-  border-radius: 100px;
+.CommunityIcon {
+  transform: translate(120%);
 }
 
 @media (max-width: 420px) {
@@ -180,23 +155,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #a16d6d;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-.community-app-container {
-  max-width: 402px;
-  width: 100%;
-  height: 874px;
-  background-color: var(--background-main);
-  border-radius: 28px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
