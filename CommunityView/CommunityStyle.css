@@ -104,7 +104,7 @@
 .nav-background-shape {
     position: absolute;
     bottom: 0px; /* Height of home indicator area */
-    translate: 2px 5px;
+    translate: -28px 5px;
   }
 
 .main-nav {
@@ -127,9 +127,6 @@
     height: 81px;
   }
 
-.CommunityIcon {
-  transform: translate(120%);
-}
 
 @media (max-width: 420px) {
   .community-app-container {

@@ -7,41 +7,54 @@
   <link rel="stylesheet" href="/MapView/MapStyle.css">
 </head>
 <body>
+  <!--Phone Page-->
   <section id="map-view">
+    <!--Main Map View-->
   <div class="map-container">
-    <img src="/MapView/images/Map.png" alt="City map background" class="map-background">
-
+    <!--Map Background-->
+    <img src="/images/MapView/Map.svg" alt="City map background" class="map-background">
+    <!--Search Bar Header Class-->
     <header class="top-bar">
+      <!--Search Bar Element-->
       <div class="search-bar">
-        <img src="/MapView/images/BurgerMenu.svg" alt="Menu Icon" class="search-icon">
+        <!--Burger Menu-->
+        <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon" class="search-icon">
+        <!--Search Text-->
         <span class="search-text">Search</span>
-        <img src="/MapView/images/SearchIcon.svg" alt="Search Icon" class="search-icon">
+        <!--Search Icon-->
+        <img src="/images/Global/SearchIcon.svg" alt="Search Icon" class="search-icon">
       </div>
-      <button class="account-button">
-        <img src="/MapView/images/AccountIcon.svg" alt="Account">
-      </button>
+      <!--Account Button-->
+      <a href="Account.html" class="account-button">
+        <!--Account Icon-->
+        <img src="/images/Global/AccountIcon.svg" alt="Account">
+      </a>
     </header>
-
+    <!--Nav Bar Footer Element-->
     <footer class="bottom-bar">
-      <!--merged image-->
+      <!--Nav Bar Background-->
       <div class="nav-background-shape">
-        <!-- This div represents the gray navigation bar background (node 11:13) -->
-        <!-- The notch effect is created by the central button overlapping it from above -->
-         <img src="/MapView/images/Subtract.png" alt="nav-bar">
+         <img src="/images/Global/Nav Bar.png" alt="nav-bar">
       </div>
+      <!--Nav Buttons-->
       <nav class="main-nav">
+        <!--Browser Button-->
         <a href="/Pages/Browser.html" class="nav-link">
-          <img src="/MapView/images/BrowserIcon.svg" alt="Browse">
+          <!--Broswer Icon-->
+          <img src="/images/Global/BrowserIcon.svg" alt="Browse">
         </a>
+        <!--Map Button-->
         <a href="/Pages/Map.html" class="nav-link nav-link-central">
-          <!--merged image-->
+          <!--Map Icons-->
           <div class="central-button-wrapper">
-            <img src="/MapView/images/11_17.svg" alt="Central button background" class="central-button-bg">
-            <img src="/MapView/images/5_225.svg" alt="Map location pin" class="central-button-icon">
+            <img src="/images/MapView/MapIconSelected.svg" alt="Central button background" class="central-button-bg">
+            <!-- <img src="/MapView/images/5_225.svg" alt="Map location pin" class="central-button-icon"> -->
           </div>
         </a>
+        <!--Community Button-->
         <a href="/Pages/Community.html" class="nav-link">
-          <img src="/MapView/images/5_241.svg" alt="Community">
+          <!--Community Icon-->
+          <img src="/images/Global/Community Greyed Icon.svg" alt="Community">
         </a>
       </nav>
     </footer>
