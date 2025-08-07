@@ -30,7 +30,7 @@
 .icon-button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -87,10 +87,6 @@
 /* CSS for section section:footer */
 
 
-.nav-item img {
-  display: block;
-  transform: translate(0px, -10px);
-}
 
 .bottom-bar {
     position: absolute;
@@ -104,7 +100,7 @@
 .nav-background-shape {
     position: absolute;
     bottom: 0px; /* Height of home indicator area */
-    translate: -28px 5px;
+    translate: -0px 0px;
   }
 
 .main-nav {
@@ -116,7 +112,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 -15px;
   }
 
 .nav-link {
