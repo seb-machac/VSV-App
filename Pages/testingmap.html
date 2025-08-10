@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Test Map</title>
   <link rel="stylesheet" href="/MapView/testingmap.css">
 </head>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
+</script>
 <body>
   <a href="Map.html">normal map</a>
   <!--Phone Page-->
@@ -13,7 +16,6 @@
     <!--Main Map View-->
   <div class="map-container">
     <!--Map Background-->
-    
     <div id="map" class="map-background"></div>
     <!--Search Bar Header Class-->
     <header class="top-bar">
@@ -22,7 +24,7 @@
         <!--Burger Menu-->
         <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon" class="search-icon">
         <!--Search Text-->
-        <span class="search-text">Search</span>
+        <input placeholder="Search" class="search-text"/>
         <!--Search Icon-->
         <img src="/images/Global/SearchIcon.svg" alt="Search Icon" class="search-icon">
       </div>
@@ -61,17 +63,7 @@
     </footer>
   </div>
 </section>
-<script>
-  function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -33.86, lng: 151.21 },
-      zoom: 10,
-      disableDefaultUI: true
-    });
-  }
-</script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
-</script>
+<script src="/MapView/MapTestScript.js"></script>
+
 </body>
 </html>
