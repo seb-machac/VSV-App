@@ -6,9 +6,7 @@
   <title>Test Map</title>
   <link rel="stylesheet" href="/MapView/testingmap.css">
 </head>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
-</script>
+
 <body>
   <a href="Map.html">normal map</a>
   <!--Phone Page-->
@@ -24,9 +22,9 @@
         <!--Burger Menu-->
         <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon" class="search-icon">
         <!--Search Text-->
-        <input placeholder="Search" class="search-text"/>
+        <input placeholder="Search" id="Search-Input" class="search-text"/>
         <!--Search Icon-->
-        <img src="/images/Global/SearchIcon.svg" alt="Search Icon" class="search-icon">
+        <img src="/images/Global/SearchIcon.svg" alt="Search Icon" id="Search-Button" class="search-icon">
       </div>
       <!--Account Button-->
       <a href="Account.html" class="account-button">
@@ -64,6 +62,8 @@
   </div>
 </section>
 <script src="/MapView/MapTestScript.js"></script>
-
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
+</script>
 </body>
 </html>

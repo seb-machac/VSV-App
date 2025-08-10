@@ -6,6 +6,9 @@
   <title>Map</title>
   <link rel="stylesheet" href="/MapView/testingmap.css">
 </head>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
+</script>
 <body>
   <a href="testingmap.html">test map</a>
   <!--Phone Page-->
@@ -60,17 +63,6 @@
     </footer>
   </div>
 </section>
-<script>
-  function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -33.86, lng: 151.21 },
-      zoom: 10,
-      disableDefaultUI: true
-    });
-  }
-</script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
-</script>
+<script src="/MapView/MapScript.js"></script>
 </body>
 </html>
