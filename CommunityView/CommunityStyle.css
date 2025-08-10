@@ -5,6 +5,9 @@
   padding: 77px 12px 0 11px;
   flex-shrink: 0;
 }
+.main-content {
+  border-radius: 28px;
+}
 
 .search-bar {
   flex-grow: 1;
@@ -100,19 +103,17 @@
 .nav-background-shape {
     position: absolute;
     bottom: 0px; /* Height of home indicator area */
-    translate: -0px 0px;
+    translate: -0px 3px;
   }
 
 .main-nav {
     position: absolute;
-    bottom: 34px;
     left: 0;
     right: 0;
     height: 72px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 -15px;
   }
 
 .nav-link {
@@ -139,6 +140,9 @@
   --black: #000000;
 }
 
+.navbar {
+  width: 402px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -148,7 +152,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #a16d6d;
+  background-color: #584d4d;
 }
 
 *,

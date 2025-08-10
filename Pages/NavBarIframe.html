@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 106px;
+    z-index: 10;
+  }
+
+.nav-background-shape {
+    position: absolute;
+    bottom: 0px; /* Height of home indicator area */
+    translate: -0px 0px;
+  }
+
+.main-nav {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    right: 0;
+    height: 72px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 -15px;
+  }
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 81px;
+    height: 81px;
+  }
+
+
+    </style>
+</head>
+<body>
+    <footer class="bottom-bar">
+      <!--Nav Bar Background-->
+      <div class="nav-background-shape">
+         <img src="/images/Global/Nav Bar.png" alt="nav-bar">
+      </div>
+      <!--Nav Buttons-->
+      <nav class="main-nav">
+        <!--Browser Button-->
+        <a href="/Pages/Browser.html" class="nav-link">
+          <!--Broswer Icon-->
+          <img src="/images/Global/BrowserIcon.svg" alt="Browse">
+        </a>
+        <!--Map Button-->
+        <a href="/Pages/Map.html" class="nav-link">
+          <!--Map Icons-->
+          <div class="central-button-wrapper">
+            <img src="/images/MapView/MapIconSelected.svg" alt="Central button background" class="central-button-bg">
+            <!-- <img src="/MapView/images/5_225.svg" alt="Map location pin" class="central-button-icon"> -->
+          </div>
+        </a>
+        <!--Community Button-->
+        <a href="/Pages/Community.html" class="nav-link">
+          <!--Community Icon-->
+          <img src="/images/Global/Community Greyed Icon.svg" alt="Community">
+        </a>
+      </nav>
+    </footer>
+</body>
+</html>
