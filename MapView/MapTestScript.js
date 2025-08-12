@@ -1,7 +1,7 @@
 
 let map, infoWindow;
 let markers = {};
-
+let Locations = fetch('../Locations.json').then(response => response.json());
 
 async function initMap() {
     const position = { lat: -25.344, lng: 131.031 };
@@ -41,6 +41,7 @@ async function initMap() {
             }
         );
     };
+    console.log(Locations)
     const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
@@ -55,13 +56,9 @@ async function findPlaces(query) {
         textQuery: query,
         fields: ['displayName', 'location', 'businessStatus'],
         includedType: '', // Restrict query to a specific type (leave blank for any).
-        useStrictTypeFiltering: true,
-        locationBias: map.center,
-        isOpenNow: true,
         language: 'en-US',
-        maxResultCount: 8,
+        maxResultCount: 100,
         minRating: 1, // Specify a minimum rating.
-        region: 'us',
     };
     const { places } = await Place.searchByText(request);
     if (places.length) {
@@ -80,6 +77,7 @@ async function findPlaces(query) {
                 position: place.location,
                 title: place.displayName,
             });
+            console.log(place.location);
             markers[place.id] = marker;
             marker.addListener('gmp-click', () => {
                 map.panTo(place.location);

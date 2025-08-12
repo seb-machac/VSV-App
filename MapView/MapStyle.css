@@ -10,6 +10,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 402px;
+  height: 874px;
+  flex-direction: column;
 }
 
 /* CSS from section:map */
