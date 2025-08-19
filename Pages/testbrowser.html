@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/BrowserView/BrowserStyle.css">
+  <link rel="stylesheet" href="/BrowserView/testbrowserStyle.css">
+  <script src="../BrowserView/testbrowser.js" defer></script>
 </head>
 <body>
 <div class="app-shell">
@@ -25,12 +26,14 @@
 
     <section id="gallery" class="gallery-section">
       <div class="gallery-grid">
-        <article class="card">
-          <img class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+        <article  class="card">
+            <a id="Card_1" href="https://www.thingiverse.com/">
+          <img class="card-image" id="Card_1_Image" src="/images/BrowserView/STL.svg" alt="STL file preview">
           <div class="card-info">
-            <img class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Thingiverse Icon">
-            <p class="info-text">Ex sapien</p>
+            <img class="info-icon" id="Card_1_Source" src="/images/BrowserView/ThingiverseIcon.svg" alt="Thingiverse Icon">
+            <p class="info-text" id="Card_1_Title">Ex sapien</p>
           </div>
+          </a>
         </article>
         <article class="card">
           <img class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
@@ -60,11 +63,11 @@
             <p class="info-text">Tempus leo</p>
           </div>
         </article>
-        <article class="card">
-          <img class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+        <article id="Card_2" class="card">
+          <img class="card-image" id="Card_2_Image" src="/images/BrowserView/STL.svg" alt="STL file preview">
           <div class="card-info">
-            <img class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Thingiverse Icon">
-            <p class="info-text">Nec metus</p>
+            <img class="info-icon" id="Card_2_Source" src="/images/BrowserView/ThingiverseIcon.svg" alt="Thingiverse Icon">
+            <p class="info-text" id="Card_2_Title">Nec metus</p>
           </div>
         </article>
       </div>

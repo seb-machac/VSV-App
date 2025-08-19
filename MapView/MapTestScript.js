@@ -1,16 +1,17 @@
 
 let map, infoWindow;
 let markers = {};
-let Locations = fetch('../Locations.json').then(response => response.json());
 
 async function initMap() {
+    const Locations = fetch('../Locations.json').then(response => response.json());
+
     const position = { lat: -25.344, lng: 131.031 };
     const { Map, InfoWindow} = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
     map = new Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 10,
+        center: { lat: -37.814, lng: 144.96322 },
+        zoom: 20,
         disableDefaultUI: true,
         mapTypeId: "satellite",
         mapId: "TestMap",
@@ -41,7 +42,7 @@ async function initMap() {
             }
         );
     };
-    console.log(Locations)
+    console.log(Locations.Places)
     const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
