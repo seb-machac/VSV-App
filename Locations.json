@@ -1,3 +1,17 @@
-{
-        "position": [-37, 44]
-}
+[
+    {
+        "lat": -37.81,
+        "lng": 145.1,
+        "title": "Extruder 1"
+    },
+    {
+        "lat": -37.82,
+        "lng": 145.1,
+        "title": "Extruder 2"
+    },
+    {
+        "lat": 0,
+        "lng": 0,
+        "title": "Extruder 3"
+    }
+]

@@ -10,9 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 402px;
-  height: 874px;
-  flex-direction: column;
 }
 
 /* CSS from section:map */
@@ -72,6 +69,9 @@ body {
     line-height: 24px;
     letter-spacing: 0.5px;
     padding: 0 8px;
+    border: none;
+    background-color: #d9d9d9;
+    width: 193px;
   }
 
   .account-button {
@@ -144,7 +144,7 @@ body {
     border-radius: 100px;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 402px) {
     .map-container {
       width: 100%;
       height: 100vh;

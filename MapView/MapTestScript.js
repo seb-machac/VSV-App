@@ -1,21 +1,24 @@
 
-let map, infoWindow;
-let markers = {};
+let infoWindow;
 
 async function initMap() {
-    const Locations = fetch('../Locations.json').then(response => response.json());
+    let response = await fetch('../Locations.json');
+    const Locations = await response.json();
 
-    const position = { lat: -25.344, lng: 131.031 };
-    const { Map, InfoWindow} = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const { Map, InfoWindow, RenderingType, setTilt } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement, PinElement} = await google.maps.importLibrary("marker");
+
 
     map = new Map(document.getElementById("map"), {
         center: { lat: -37.814, lng: 144.96322 },
-        zoom: 20,
+        zoom: 10,
         disableDefaultUI: true,
-        mapTypeId: "satellite",
+        renderingType: RenderingType.RASTER,
+        mapTypeId: "hybrid",
         mapId: "TestMap",
     });
+    map.setTilt(0);
+
 
     const textInput = document.getElementById('Search-Input');
     const textInputButton = document.getElementById('Search-Button');
@@ -42,12 +45,35 @@ async function initMap() {
             }
         );
     };
-    console.log(Locations.Places)
-    const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          map.setCenter(pos);
+        },
+        () => {
+          console.log("Permission Error");
+        },
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      console.log("Permission Error");
+    }
+
+    Locations.forEach((location) => {
+        new google.maps.marker.AdvancedMarkerElement({
+            map: map,
+            position: location,
+            title: location.title,
+            content: new PinElement({
+                        scale:2,
+                    }).element,
+        });
+    });
 }
 
 async function findPlaces(query) {

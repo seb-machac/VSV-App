@@ -2,8 +2,7 @@ ToDo:
 Phone Bezels
 Account Page
 Map Page JS:
-  create markers from locations.json
-  only show locations listed in locations.json when searching
-Browser Page JS
+  Center on user location
+  Customise road and feature overlays
 Account Page JS
 Community Page JS
