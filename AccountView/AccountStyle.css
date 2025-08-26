@@ -1,30 +1,35 @@
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
-  color: #000000;
+  background-color: #584d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 402px;
+  height: 874px;
 }
 
-.account-page-container {
+.app-shell {
+  position: relative;
+  width: 402px;
   max-width: 402px;
   height: 874px;
-  margin: 40px auto;
-  background-color: #aeaeae;
+  align-content: center;
+  justify-self: center;
   border-radius: 28px;
   overflow: hidden;
-  position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .main-content {
-  padding: 0 28px;
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
+  padding: 24px 9px;
+  border-radius: 28px;
 }
 
-/* CSS from section:header */
+
 .profile-header {
     padding-top: 138px; /* y(-228) - y_container(-366) */
     display: flex;
@@ -93,7 +98,7 @@ body {
     padding-top: 38px; /* y(10) - y(-28) = 38px */
   }
 
-/* CSS from section:details */
+/* CSS for section section:details */
 .user-details {
     display: flex;
     justify-content: space-between;
@@ -184,7 +189,7 @@ body {
     margin: 0;
   }
 
-/* CSS from section:footer */
+/* CSS for section section:footer */
 .app-footer {
     position: absolute;
     bottom: 0;

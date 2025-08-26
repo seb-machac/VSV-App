@@ -1,69 +1,100 @@
 <!DOCTYPE html>
+<!--Document Language-->
 <html lang="en">
 <head>
+  <!--Charater Type-->
   <meta charset="UTF-8">
+  <!--Page MetaData-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community</title>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Community Tab</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <!--Page Title-->
+  <title>Community Tab</title>
+  <!--Get Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!--Get Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Get Roboto Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <!--Connect Main Sylesheet-->
   <link rel="stylesheet" href="/CommunityView/CommunityStyle.css">
+  <!--Connect Main Script-->
   <script src="/CommunityView/CommunityScript.js" defer></script>
 </head>
 <body>
+  <!--Main Page Content-->
   <section class="community-view main-content">
-<header id="section-header" class="app-header">
-  <div class="search-bar">
+  <!--Header for Search Bar and Account-->
+  <header id="section-header" class="app-header">
+    <!--Search Bar Element-->
+    <div class="search-bar">
+      <!--Burger Menu Button-->
+      <button class="icon-button">
+        <!--Burger Menu Image-->
+        <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon">
+      </button>
+      <!--Search Bar Placeholder Text-->
+      <span class="search-text">Search </span>
+      <!--Search Icon Button-->
+      <button class="icon-button">
+        <!--Search Icon Image-->
+        <img src="/images/Global/SearchIcon.svg" alt="Search Icon">
+      </button>
+    </div>
+    <!--Account Button-->
     <button class="icon-button">
-      <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon">
+      <!--Account Image-->
+      <img src="/images/Global/AccountIcon.svg" alt="Account Icon">
     </button>
-    <span class="search-text">Search </span>
-    <button class="icon-button">
-      <img src="/images/Global/SearchIcon.svg" alt="Search Icon">
-    </button>
-  </div>
-  <button class="icon-button">
-    <img src="/images/Global/AccountIcon.svg" alt="Account Icon">
-  </button>
-</header>
-<main id="section-main" class="content-feed">
-  <article class="content-card">
-    <h2 class="card-title">Ut hendrerit semper vel class aptent taciti sociosqu. </h2>
-    <p class="card-body">Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer?</p>
-  </article>
-  <article class="content-card">
-    <h2 class="card-title">Ad litora torquent per conubia nostra inceptos himenaeos?</h2>
-    <p class="card-body"> In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia.....</p>
-  </article>
-  <article class="content-card">
-    <h2 class="card-title">Lorem ipsum dolor amet consectetur adipiscing.</h2>
-    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam......</p>
-  </article>
-</main>
-<footer class="bottom-bar">
-      <!--merged image-->
-      <div class="nav-background-shape">
-        <!-- This div represents the gray navigation bar background (node 11:13) -->
-        <!-- The notch effect is created by the central button overlapping it from above -->
-         <img src="/images/CommunityView/NavBar.svg" alt="nav-bar">
-      </div>
-      <nav class="main-nav">
-        <a href="/Pages/Browser.html" class="nav-link">
-          <img src="/images/Global/BrowserIcon.svg" alt="Browse">
-        </a>
-        <a href="/Pages/Map.html" class="nav-link">
-          <div class="nav-link">
-            <img src="/images/Global/MapIcon.svg" alt="Map">
-          </div>
-        </a>
-        <a href="/Pages/Community.html" class="nav-link">
-          <img src="/images/CommunityView/CommunitySelected.svg" alt="Community">
-        </a>
-      </nav>
-    </footer>
-</section>
+  </header>
+  <!--Main Page Content-->
+  <main id="section-main" class="content-feed">
+    <!--First Post in Feed-->
+    <article class="content-card">
+      <!--Post Title-->
+      <h2 class="card-title">Ut hendrerit semper vel class aptent taciti sociosqu. </h2>
+      <!--Post Body-->
+      <p class="card-body">Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer?</p>
+    </article>
+    <!--Second Post in Feed-->
+    <article class="content-card">
+      <!--Post Title-->
+      <h2 class="card-title">Ad litora torquent per conubia nostra inceptos himenaeos?</h2>
+      <!--Post Body-->
+      <p class="card-body"> In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia.....</p>
+    </article>
+    <!--Third Post in Feed-->
+    <article class="content-card">
+      <!--Post Title-->
+      <h2 class="card-title">Lorem ipsum dolor amet consectetur adipiscing.</h2>
+      <!--Post Body-->
+      <p class="card-body">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam......</p>
+    </article>
+  </main>
+  <!--Footer for Nav Bar-->
+  <footer class="bottom-bar">
+        <!--Nav Bar Background Div-->
+        <div class="nav-background-shape">
+          <!--Nav Bar Background Image-->
+          <img src="/images/CommunityView/NavBar.svg" alt="nav-bar">
+        </div>
+        <!--Nav Bar Items-->
+        <nav class="main-nav">
+          <!--Page Button-->
+          <a href="/Pages/Browser.html" class="nav-link">
+            <!--Button Icon-->
+            <img src="/images/Global/BrowserIcon.svg" alt="Browse">
+          </a>
+          <!--Page Button-->
+          <a href="/Pages/Map.html" class="nav-link">
+              <!--Button Icon-->
+              <img src="/images/Global/MapIcon.svg" alt="Map">
+          </a>
+          <!--Page Button-->
+          <a href="/Pages/Community.html" class="nav-link">
+            <!--Button Icon-->
+            <img src="/images/CommunityView/CommunitySelected.svg" alt="Community">
+          </a>
+        </nav>
+      </footer>
+  </section>
 </body>
 </html>
