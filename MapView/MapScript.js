@@ -85,15 +85,24 @@ async function findPlaces(query) {
       map.fitBounds(bounds);
   }
   else {
-      console.log('No results');
+    //Alert User of an Error with an Alert
+    window.alert("No Results Found.")
   }}
+  //Start New async function for Updating InfoWindows
   async function updateInfoWindow(title, content, anchor) {
-  infoWindow.setContent(content);
-  infoWindow.setHeaderContent(title);
-  infoWindow.open({
-      map,
-      anchor,
-      shouldFocus: false,
-  });
+    //Set Main Content to content Argument
+    infoWindow.setContent(content);
+    //Set Header to title Argument
+    infoWindow.setHeaderContent(title);
+    //Open the InfoWindow
+    infoWindow.open({
+        //Select Current Map
+        map,
+        //Select where the InfoWindow should Anchor to
+        anchor,
+        //Dont Auto Focus on New Window
+        shouldFocus: false,
+    });
 }
+//Initialise Map
 window.initMap = initMap;

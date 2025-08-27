@@ -1,41 +1,45 @@
 body {
+  margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #584d4d;
-  display: flex;
+  background-color: #f0f0f0;
+  color: #000000;
   justify-content: center;
-  align-items: center;
-  width: 402px;
-  height: 874px;
 }
 
-.app-shell {
-  position: relative;
+.app-body {
   width: 402px;
+  height: 802px;
+  justify-self: center;
+  border-radius: 10px;
+}
+
+.account-page-container {
   max-width: 402px;
   height: 874px;
-  align-content: center;
-  justify-self: center;
+  margin: 40px auto;
+  background-color: #aeaeae;
   border-radius: 28px;
   overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .main-content {
+  padding: 0 28px;
   flex-grow: 1;
-  overflow-y: auto;
-  padding: 24px 9px;
-  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
 }
 
-
+/* CSS from section:header */
 .profile-header {
-    padding-top: 138px; /* y(-228) - y_container(-366) */
+    padding-top: 100px; /* y(-228) - y_container(-366) */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 83px; /* y_heading(-28) - (y_img(-228) + h_img(238)/2) = 81px */
+    background-color: #aeaeae;
   }
 
   .profile-picture-wrapper {
@@ -53,6 +57,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    background-color: #d9d9d9;
     gap: 44px; /* x_bio(-566) - (x_heading(-768) + w_heading(137)) = 65px. Using a smaller gap for responsiveness. */
   }
 
@@ -98,13 +103,14 @@ body {
     padding-top: 38px; /* y(10) - y(-28) = 38px */
   }
 
-/* CSS for section section:details */
+/* CSS from section:details */
 .user-details {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding-top: 46px; /* y_details(129) - y_address(55) - h_address(28) = 46px */
+    gap: 10px;
+    padding-top: 30px; /* y_details(129) - y_address(55) - h_address(28) = 46px */
     flex-grow: 1;
+    background-color: #d9d9d9;
   }
 
   .info-column {
@@ -189,7 +195,7 @@ body {
     margin: 0;
   }
 
-/* CSS for section section:footer */
+/* CSS from section:footer */
 .app-footer {
     position: absolute;
     bottom: 0;
