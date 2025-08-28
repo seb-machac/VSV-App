@@ -6,7 +6,7 @@ async function initMap() {
 
     const { Map, InfoWindow, RenderingType, setTilt } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement, PinElement} = await google.maps.importLibrary("marker");
-
+    const { Geocoding } = await google.maps.importLibrary("")
 
     map = new Map(document.getElementById("map"), {
         center: { lat: -37.814, lng: 144.96322 },
@@ -53,7 +53,7 @@ async function findPlaces(query) {
       fields: ['displayName', 'location', 'businessStatus'],
       includedType: '', // Restrict query to a specific type (leave blank for any).
       language: 'en-US',
-      maxResultCount: 100,
+      maxResultCount: 1000,
       minRating: 1, // Specify a minimum rating.
   };
   const { places } = await Place.searchByText(request);

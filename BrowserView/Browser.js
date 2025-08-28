@@ -6,7 +6,10 @@ async function thingiverseinit() {
     let data = await response.json();
 
     //Start for loop to loop through all Items
-    for (let i = 1; i < 7; i++) {
+    for (let i = 0; i < 6; i++) {
+        // eval("var Card_"+String(i)+"= new Card("+i+");");
+        // console.log(Card_1.src);
+
         //Find current Card Image Element
         const Card_i_Image = document.getElementById("Card_"+i+"_Image");
         //Find current Card Title Element
@@ -15,12 +18,49 @@ async function thingiverseinit() {
         const Card_i = document.getElementById("Card_"+i);
 
         //Replace current Card Image
-        Card_i_Image.src = data[i-1].thumbnail;
+        Card_i_Image.src = data[i].thumbnail;
         //Replace current Card Title
-        Card_i_Title.innerText = data[i-1].name;
+        Card_i_Title.innerText = data[i].name;
         //Replace current Card URL
-        Card_i.href = data[i-1].public_url;
+        Card_i.href = data[i].public_url;
     };
 };
 //Call the function
 thingiverseinit();
+
+async function Search(query) {
+    let response = await fetch("https://api.thingiverse.com/search/"+String(query)+"/?access_token=6d4de6aafc46e965dafcb4e56b18a251&type=thing&per_page=6");
+    let data = await response.json();
+    for (let i = 0; i < 6; i++) {
+        let Card_i_Image = await document.getElementById("Card_"+i+"_Image");
+        let Card_i_Title = document.getElementById("Card_"+i+"_Title");
+        let Card_i = document.getElementById("Card_"+i);
+
+        Card_i_Image.src = data.hits[i].thumbnail;
+        Card_i_Title.innerText = data.hits[i].name;
+        Card_i.href = data.hits[i].public_url;
+    }
+};
+const query = document.getElementById("Search-Query");
+
+query.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            if (query.value == "") {
+                thingiverseinit();
+            }
+            Search(query.value);
+        }
+    });
+
+// class Card {
+//     constructor(id) {
+//         this.id = id
+//     }
+//     get ID() {
+//         return this.id;
+//     };
+
+//     get src() {
+//         return document.getElementById(String(this.id)).src;
+//     }
+// };

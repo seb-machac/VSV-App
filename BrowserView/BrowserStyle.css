@@ -77,6 +77,8 @@ body {
     letter-spacing: 0.5px;
     flex-grow: 1;
     margin: 0 12px;
+    background-color: #d9d9d9;
+    border-width: 0px;
   }
 
   .gallery-section {
