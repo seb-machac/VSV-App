@@ -11,7 +11,8 @@ async function initMap() {
     const { Map, InfoWindow, RenderingType, setTilt } = await google.maps.importLibrary("maps");
     //Import Classes and Object Types from Marker Library
     const { AdvancedMarkerElement, PinElement} = await google.maps.importLibrary("marker");
-    //Define New Map at Element "map"
+    const { Geocoding } = await google.maps.importLibrary("")
+
     map = new Map(document.getElementById("map"), {
         //Initial Center Position
         center: { lat: -37.814, lng: 144.96322 },
@@ -149,4 +150,5 @@ async function findPlaces(query) {
         shouldFocus: false,
     });
 }
+//Initialise Map
 window.initMap = initMap;
