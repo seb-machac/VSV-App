@@ -11,7 +11,6 @@
 
 ### Documentation Needed:
 * Map
-  * HTML
   * JS
 * Account
   * HTML
