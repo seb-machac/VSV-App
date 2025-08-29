@@ -1,17 +1,19 @@
 <!DOCTYPE html>
+<!--Document Lanugage-->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--MetaData-->
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Document Title-->
   <title>Map</title>
+  <!--Main Stylesheet-->
   <link rel="stylesheet" href="/MapView/MapStyle.css">
 </head>
-
 <body>
   <a href="testmap.html">Test Map</a>
-<!--Phone Page-->
+  <!--Phone Page-->
   <section id="map-view">
-    <!--Main Map View-->
+  <!--Main Map View-->
   <div class="map-container">
     <!--Map Background-->
     <div id="map" class="map-background"></div>
@@ -32,36 +34,37 @@
         <img src="/images/Global/AccountIcon.svg" alt="Account">
       </a>
     </header>
-    <!--Nav Bar Footer Element-->
+    <!--Footer Element for Nav Bar-->
     <footer class="bottom-bar">
-      <!--Nav Bar Background-->
+      <!--Nav Bar Background Div-->
       <div class="nav-background-shape">
+        <!--Nav Bar Background Image-->
          <img src="/images/MapView/NavBar.svg" alt="nav-bar">
       </div>
-      <!--Nav Buttons-->
+      <!--Nav Bar Items-->
       <nav class="main-nav">
         <!--Browser Button-->
         <a href="/Pages/Browser.html" class="nav-link">
-          <!--Broswer Icon-->
+          <!--Browser Icon-->
           <img src="/images/Global/BrowserIcon.svg" alt="Browse">
         </a>
         <!--Map Button-->
         <a href="/Pages/Map.html" class="nav-link">
-          <!--Map Icons-->
-          <div class="central-button-wrapper">
+          <!--Map Button Image-->
             <img src="/images/MapView/MapSelected.svg" alt="Central button background" class="central-button-bg">
-          </div>
         </a>
         <!--Community Button-->
         <a href="/Pages/Community.html" class="nav-link">
-          <!--Community Icon-->
+          <!--Community Button Image-->
           <img src="/images/Global/CommunityIcon.svg" alt="Community">
         </a>
       </nav>
     </footer>
   </div>
 </section>
+<!--Main Page Script-->
 <script src="/MapView/MapScript.js"></script>
+<!--Google Maps API-->
 <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap">
 </script>
