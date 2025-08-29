@@ -6,7 +6,16 @@ async function initMap() {
 
     const { Map, InfoWindow, RenderingType, setTilt } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement, PinElement} = await google.maps.importLibrary("marker");
-    const { Geocoding } = await google.maps.importLibrary("")
+    const geocoder = new google.maps.Geocoder();
+
+    const address = "Melbourne, Australia";
+        geocoder.geocode({ address: address }, (results, status) => {
+          if (status === "OK") {
+            console.log("Geocoded Location:", results[0].geometry.location);
+          } else {
+            console.error("Geocoding failed:", status);
+          }
+        });
 
     map = new Map(document.getElementById("map"), {
         center: { lat: -37.814, lng: 144.96322 },
