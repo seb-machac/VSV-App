@@ -13,15 +13,6 @@ async function initMap() {
     const { AdvancedMarkerElement, PinElement} = await google.maps.importLibrary("marker");
     const geocoder = new google.maps.Geocoder();
 
-    const address = "Melbourne, Australia";
-        geocoder.geocode({ address: address }, (results, status) => {
-          if (status === "OK") {
-            console.log("Geocoded Location:", results[0].geometry.location);
-          } else {
-            console.error("Geocoding failed:", status);
-          }
-        });
-
     map = new Map(document.getElementById("map"), {
         //Initial Center Position
         center: { lat: -37.814, lng: 144.96322 },
@@ -59,24 +50,31 @@ async function initMap() {
     });
     //Create new InfoWindow
     infoWindow = new google.maps.InfoWindow();
-    
+    let i = 0;
     //Loop for Each Item in Location
     Locations.forEach((location) => {
-        //Create a new Map Marker
+        let address = location.address;
+        geocoder.geocode({ address: address }, (results, status) => {
+          if (status === "OK") {
+            let latlng = results[0].geometry.location;
+            i = i + 1;
+            console.log(i);
+            //Create a new Map Marker
         new google.maps.marker.AdvancedMarkerElement({
             //Apply to current map
             map: map,
             //Set position to predefined location
-            position: location,
+            position: latlng,
             //Set title to predefined title
-            title: location.title,
-            //Customise Pin Image
-            content: new PinElement({
-                        //Scale Pin
-                        scale:2,
-                    }).element,
+            title: location.title
         });
+          } else {
+            console.error("Geocoding failed:", status);
+          }
+        });
+        
     });
+    
 }
 
 //New async funtion to search places
@@ -120,23 +118,23 @@ async function findPlaces(query) {
         //Loop through each Found Place
         places.forEach(place => {
             //Create New Marker Element
-            const marker = new AdvancedMarkerElement({
-                //Apply to current Map
-                map,
-                //Set postition to current Place Location
-                position: place.location,
-                //Set Marker title to current Place Name
-                title: place.displayName,
-            });
+            // const marker = new AdvancedMarkerElement({
+            //     //Apply to current Map
+            //     map,
+            //     //Set postition to current Place Location
+            //     position: place.location,
+            //     //Set Marker title to current Place Name
+            //     title: place.displayName,
+            // });
             //Define current Place ID for reference
-            markers[place.id] = marker;
-            //Detect Click on Marker
-            marker.addListener('gmp-click', () => {
-                //Move Map to Place Location
-                map.panTo(place.location);
-                //Display InfoWindow with Title, ID for Display, ID for Google reference
-                updateInfoWindow(place.displayName, place.id, marker);
-            });
+            // markers[place.id] = marker;
+            // //Detect Click on Marker
+            // marker.addListener('gmp-click', () => {
+            //     //Move Map to Place Location
+            //     map.panTo(place.location);
+            //     //Display InfoWindow with Title, ID for Display, ID for Google reference
+            //     updateInfoWindow(place.displayName, place.id, marker);
+            // });
             //True if Place has Location Value
             if (place.location != null) {
                 //Extend Boundary to Encompass Place Location

@@ -1,17 +1,66 @@
 [
     {
-        "lat": -37.81,
-        "lng": 145.1,
-        "title": "Extruder 1"
+        "title": "Heron Plastics",
+        "address": "42 Macauley Street Williamstown North"
     },
     {
-        "lat": -37.82,
-        "lng": 145.1,
-        "title": "Extruder 2"
+        "title": "CDS Vic Depot",
+        "address": "10 Racecourse Road, Williamstown, Victoria"
     },
     {
-        "lat": 0,
-        "lng": 0,
-        "title": "Extruder 3"
+        "title": "Atlas Recycling",
+        "address": "L 3 SE 5 167 QUEEN Street, MELBOURNE Victoria 3000"
+    },
+    {
+        "title": "Australia and New Zealand Recycling Platform",
+        "address": "461 Bourke Street, Melbourne Victoria 3000"
+    },
+    {
+        "title": "Visy Cares",
+        "address": "L 11 2 Southbank Bvd, Southbank Victoria 3006"
+    },
+    {
+        "title": "Global Renewables Ltd",
+        "address": "250 Collins St Level 5, Melbourne Victoria 3000"
+    },
+    {
+        "title": "CDS Vic OTC Albert Park",
+        "address": "30 Aughtie Drive, Albert Park VIC 3206"
+    },
+    {
+        "title": "Officeworks",
+        "address": "Shop 1 & 2 461 Bourke Street, Melbourne Victoria 3000"
+    },
+    {
+        "title": "Cleanaway Laverton MRF and Plastic Recovery Facility",
+        "address": "32 Gilbertson Road Laverton North"
+    },
+    {
+        "title": "REPLAS",
+        "address": "12 Industrial drive Sunshine"
+    },
+    {
+        "title": "BottleCycler",
+        "address": "7A Rocklea Drive Port Melbourne"
+    },
+    {
+        "title": "CDS Vic OTC Middle Park",
+        "address": "19-21 Armstrong Street, Middle Park VIC 3206"
+    },
+    {
+        "title": "CDS Vic HomeCo",
+        "address": "330 Ballarat Road, Braybrook VIC 3019"
+    },
+    {
+        "title": "Rqube Catalytic Converter recycling",
+        "address": "15 Albemarle Street, Williamstown North VIC 3016"
+    },
+    {
+        "title": "Sims Plastics",
+        "address": "17-23 Williamson Road, Maribyrnong Victoria 3032"
+    },
+    {
+        "title": "Vicfam Plastics",
+        "address": "20 Somerleigh Road, Laverton North Victoria 3026"
     }
 ]
