@@ -90,9 +90,9 @@ async function findPlaces(query) {
         //Sets textQuery to function argument 
         textQuery: query,
         //Selects which fields are required
-        fields: ['displayName', 'location', 'businessStatus'],
+        fields: ['displayName', 'location'],
         //Request all Location Types
-        includedType: '',
+        includedType: 'locality',
         //Sets Language
         language: 'en-US',
         //Sets Maximum Results to 100
@@ -118,23 +118,22 @@ async function findPlaces(query) {
         //Loop through each Found Place
         places.forEach(place => {
             //Create New Marker Element
-            // const marker = new AdvancedMarkerElement({
-            //     //Apply to current Map
-            //     map,
-            //     //Set postition to current Place Location
-            //     position: place.location,
-            //     //Set Marker title to current Place Name
-            //     title: place.displayName,
-            // });
-            //Define current Place ID for reference
-            // markers[place.id] = marker;
-            // //Detect Click on Marker
-            // marker.addListener('gmp-click', () => {
-            //     //Move Map to Place Location
-            //     map.panTo(place.location);
-            //     //Display InfoWindow with Title, ID for Display, ID for Google reference
-            //     updateInfoWindow(place.displayName, place.id, marker);
-            // });
+            const marker = new AdvancedMarkerElement({
+                //Apply to current Map
+                map,
+                //Set postition to current Place Location
+                position: place.location,
+                //Set Marker title to current Place Name
+                title: place.displayName,
+            });
+            markers[place.id] = marker;
+            //Detect Click on Marker
+            marker.addListener('gmp-click', () => {
+                //Move Map to Place Location
+                map.panTo(place.location);
+                //Display InfoWindow with Title, ID for Display, ID for Google reference
+                updateInfoWindow(place.displayName, place.id, marker);
+            });
             //True if Place has Location Value
             if (place.location != null) {
                 //Extend Boundary to Encompass Place Location

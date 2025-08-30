@@ -1,15 +1,12 @@
 //Create async function to replace the default item data
 async function thingiverseinit() {
     //Fetch the API data
-    let response = await fetch("https://api.thingiverse.com/featured?access_token=6d4de6aafc46e965dafcb4e56b18a251");
+    let response = await fetch("https://api.thingiverse.com/popular?access_token=6d4de6aafc46e965dafcb4e56b18a251");
     //Parse API data
     let data = await response.json();
 
     //Start for loop to loop through all Items
     for (let i = 0; i < 6; i++) {
-        // eval("var Card_"+String(i)+"= new Card("+i+");");
-        // console.log(Card_1.src);
-
         //Find current Card Image Element
         const Card_i_Image = document.getElementById("Card_"+i+"_Image");
         //Find current Card Title Element
@@ -31,6 +28,8 @@ thingiverseinit();
 async function Search(query) {
     let response = await fetch("https://api.thingiverse.com/search/"+String(query)+"/?access_token=6d4de6aafc46e965dafcb4e56b18a251&type=thing&per_page=6");
     let data = await response.json();
+    console.log(data);
+    if (data.total > 6) {
     for (let i = 0; i < 6; i++) {
         let Card_i_Image = await document.getElementById("Card_"+i+"_Image");
         let Card_i_Title = document.getElementById("Card_"+i+"_Title");
@@ -40,6 +39,10 @@ async function Search(query) {
         Card_i_Title.innerText = data.hits[i].name;
         Card_i.href = data.hits[i].public_url;
     }
+} else {
+    window.alert("No Results Found! \nDefaulting to Most Popular");
+    thingiverseinit();
+};
 };
 const query = document.getElementById("Search-Query");
 
