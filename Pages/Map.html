@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--Document Lanugage-->
+<html lang="en">
+<head>
+  <!--MetaData-->
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Document Title-->
+  <title>Map</title>
+  <!--Main Stylesheet-->
+  <link rel="stylesheet" href="/MapView/MapStyle.css">
+</head>
+<body>
+  <a href="testmap.html">Test Map</a>
+  <!--Phone Page-->
+  <section id="map-view">
+  <!--Main Map View-->
+  <div class="map-container">
+    <!--Map Background-->
+    <div id="map" class="map-background"></div>
+    <!--Search Bar Header Class-->
+    <header class="top-bar">
+      <!--Search Bar Element-->
+      <div class="search-bar">
+        <!--Burger Menu-->
+        <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon" class="search-icon">
+        <!--Search Text-->
+        <input placeholder="Search" id="Search-Input" class="search-text"/>
+        <!--Search Icon-->
+        <img src="/images/Global/SearchIcon.svg" alt="Search Icon" id="Search-Button" class="search-icon">
+      </div>
+      <!--Account Button-->
+      <a href="Account.html" class="account-button">
+        <!--Account Icon-->
+        <img src="/images/Global/AccountIcon.svg" alt="Account">
+      </a>
+    </header>
+    <!--Footer Element for Nav Bar-->
+    <footer class="bottom-bar">
+      <!--Nav Bar Background Div-->
+      <div class="nav-background-shape">
+        <!--Nav Bar Background Image-->
+         <img src="/images/MapView/NavBar.svg" alt="nav-bar">
+      </div>
+      <!--Nav Bar Items-->
+      <nav class="main-nav">
+        <!--Browser Button-->
+        <a href="/Pages/Browser.html" class="nav-link">
+          <!--Browser Icon-->
+          <img src="/images/Global/BrowserIcon.svg" alt="Browse">
+        </a>
+        <!--Map Button-->
+        <a href="/Pages/Map.html" class="nav-link">
+          <!--Map Button Image-->
+            <img src="/images/MapView/MapSelected.svg" alt="Central button background" class="central-button-bg">
+        </a>
+        <!--Community Button-->
+        <a href="/Pages/Community.html" class="nav-link">
+          <!--Community Button Image-->
+          <img src="/images/Global/CommunityIcon.svg" alt="Community">
+        </a>
+      </nav>
+    </footer>
+  </div>
+</section>
+<!--Main Page Script-->
+<script src="/MapView/MapScript.js"></script>
+<!--Google Maps API-->
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAykSwMb92Ro1FKcBHZroNNETAOx7ZwYuQ&loading=async&callback=initMap&libraries=places">
+</script>
+<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFB1rG0tYgKcMcKfIDwl7mg5InHk9LrUY&libraries=places" defer> -->
+</script>
+</body>
+</html>

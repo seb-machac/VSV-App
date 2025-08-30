@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--Document Language-->
+<html lang="en">
+<head>
+  <!--Character Type-->
+  <meta charset="UTF-8">
+  <!--MetaData-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Title of Page-->
+  <title>Browser</title>
+  <!--Get Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!--Get Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Get Roboto Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!--Connect Main Stylesheet-->
+  <link rel="stylesheet" href="/BrowserView/BrowserStyle.css">
+  <!--Connect Main Script-->
+  <script src="../BrowserView/Browser.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+<!--Start of Main Content-->
+  <main class="main-content">
+    <!--Search Bar Header Element-->
+    <header class="search-header">
+      <!--Search Bar Div Element-->
+      <div class="search-bar">
+        <!--Burger Menu Icon-->
+        <img src="/images/Global/BurgerMenu.svg" alt="Menu Icon" class="search-icon">     
+        <!--Search Placeholder Text-->     
+        <input type="text" placeholder="Search" id="Search-Query" class="search-text"></input>
+        <!--Search Icon-->
+        <img src="/images/Global/SearchIcon.svg" alt="Search Icon" class="search-icon">
+      </div>
+    </header>
+    <!--Starts the Gallery Section-->
+    <section id="gallery" class="gallery-section">
+      <!--Starts the Gallery Grid Element-->
+      <div class="gallery-grid">
+        <!--First Article in the Gallery-->
+        <article  class="card">
+          <!--Links the Card Image to the correct URL-->
+          <a id="Card_0" href="https://www.thingiverse.com/">
+            <!--Card Image-->
+            <img class="card-image" id="Card_0_Image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+            <!--Div for Item Information-->
+            <div class="card-info">
+              <!--Image showing origin site of Item-->
+              <img class="info-icon" id="Card_0_Source" src="/images/BrowserView/ThingiverseIcon.svg" alt="Thingiverse Icon">
+              <p class="info-text" id="Card_0_Title">Ex sapien</p>
+            </div>
+          </a>
+       
+       <!--Item Title--> </article>
+        <!--Second Article in the Gallery-->
+        <article class="card">
+          <!--Links the Item Image to the correct URL-->
+          <a id="Card_1" href="https://www.thingiverse.com/">
+          <!--Item Image-->
+          <img id="Card_1_Image" class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+          <!--Div for Item Information-->
+          <div class="card-info">
+            <!--Image showing origin site of Item-->
+            <img id="Card_1_Source" class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Printables Icon">
+            <!--Item Title-->
+            <p id="Card_1_Title" class="info-text">Sem pla....</p>
+          </div>
+          </a>
+        </article>
+        <!--Third Article in the Gallery-->
+        <article class="card">
+          <!--Links the Item Image to the correct URL-->
+          <a id="Card_2" href="https://www.thingiverse.com/">
+            <!--Item Image-->
+          <img id="Card_2_Image" class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+          <!--Div for Item Information-->
+          <div class="card-info">
+            <!--Image showing origin site of Item-->
+            <img id="Card_2_Source" class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Printables Icon">
+            <!--Item Title-->
+            <p id="Card_2_Title" class="info-text">Sem pla....</p>
+          </div>
+          </a>
+        </article>
+        <!--Fourth Article in the Gallery-->
+        <article class="card">
+          <!--Links the Item Image to the correct URL-->
+          <a id="Card_3" href="https://www.thingiverse.com/">
+            <!--Item Image-->
+          <img id="Card_3_Image" class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+          <!--Div for Item Information-->
+          <div class="card-info">
+            <!--Image showing origin site of Item-->
+            <img id="Card_3_Source" class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Printables Icon">
+            <!--Item Title-->
+            <p id="Card_3_Title" class="info-text">Sem pla....</p>
+          </div>
+          </a>
+        </article>
+        <!--Fifth Article in the Gallery-->
+        <article class="card">
+          <!--Links the Item Image to the correct URL-->
+          <a id="Card_4" href="https://www.thingiverse.com/">
+            <!--Item Image-->
+          <img id="Card_4_Image" class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+          <!--Div for Item Information-->
+          <div class="card-info">
+            <!--Image showing origin site of Item-->
+            <img id="Card_4_Source" class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Printables Icon">
+            <!--Item Title-->
+            <p id="Card_4_Title" class="info-text">Sem pla....</p>
+          </div>
+          </a>
+        </article>
+        <!--Sixth Article in the Gallery-->
+        <article class="card">
+          <!--Links the Item Image to the correct URL-->
+          <a id="Card_5" href="https://www.thingiverse.com/">
+            <!--Item Image-->
+          <img id="Card_5_Image" class="card-image" src="/images/BrowserView/STL.svg" alt="STL file preview">
+          <!--Div for Item Information-->
+          <div class="card-info">
+            <!--Image showing origin site of Item-->
+            <img id="Card_5_Source" class="info-icon" src="/images/BrowserView/ThingiverseIcon.svg" alt="Printables Icon">
+            <!--Item Title-->
+            <p id="Card_5_Title" class="info-text">Sem pla....</p>
+          </div>
+          </a>
+        </article>
+      </div>
+      <!--End of Gallery-->
+    </section>
+    <!--End of Main Page Elements-->
+  </main>
+  <!--Footer Element for Nav Bar-->
+  <footer class="bottom-bar">
+      <!--Nav Bar Background-->
+      <div class="nav-background-shape">
+          <!--Nav Bar Background Image-->
+         <img src="/images/BrowserView/NavBar.svg" alt="nav-bar">
+      </div>
+      <!--Nav Bar Items-->
+      <nav class="main-nav">
+        <!--Browser Button-->
+        <a href="/Pages/Browser.html" class="nav-link">
+          <!--Browser Button Image-->
+          <img src="/images/BrowserView/Browse.svg" alt="Browse">
+        </a>
+        <!--Map Button-->
+        <a href="/Pages/Map.html" class="nav-link">
+            <!--Map Button Image-->
+            <img src="/images/Global/MapIcon.svg" alt="Map">
+        </a>
+        <!--Community Button-->
+        <a href="/Pages/Community.html" class="nav-link">
+          <!--Community Button Image-->
+          <img src="/images/Global/CommunityIcon.svg" alt="Community">
+        </a>
+      </nav>
+    </footer>
+</div>
+</body>
+</html>

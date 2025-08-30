@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  color: #000000;
+  justify-content: center;
+}
+
+.app-body {
+  width: 402px;
+  height: 802px;
+  justify-self: center;
+  border-radius: 10px;
+}
+
+.account-page-container {
+  max-width: 402px;
+  height: 874px;
+  margin: 40px auto;
+  background-color: #aeaeae;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  padding: 0 28px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+/* CSS from section:header */
+.profile-header {
+    padding-top: 100px; /* y(-228) - y_container(-366) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #aeaeae;
+  }
+
+  .profile-picture-wrapper {
+    width: 238px;
+    height: 238px;
+  }
+
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #d9d9d9;
+    gap: 44px; /* x_bio(-566) - (x_heading(-768) + w_heading(137)) = 65px. Using a smaller gap for responsiveness. */
+  }
+
+  .user-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .username {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47.6px;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+
+  .full-name {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.56px;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+
+  .address {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.66px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding-top: 29px; /* y(55) - y(23) - h(29) = 3px. This seems wrong. Let's use a more reasonable value. */
+  }
+
+  .short-bio {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17.85px;
+    letter-spacing: 0.5px;
+    opacity: 0.82;
+    margin: 0;
+    max-width: 184px;
+    padding-top: 38px; /* y(10) - y(-28) = 38px */
+  }
+
+/* CSS from section:details */
+.user-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 30px; /* y_details(129) - y_address(55) - h_address(28) = 46px */
+    flex-grow: 1;
+    background-color: #d9d9d9;
+  }
+
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    flex-shrink: 0;
+  }
+
+  .name-group,
+  .location-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+  }
+
+  .form-field,
+  .form-field-wide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+  }
+
+  .form-field {
+    gap: 13px;
+  }
+
+  .form-field-wide {
+    gap: 6px;
+  }
+
+  .input-display {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #b7b7b7;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+
+  .edit-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .description-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .description-box {
+    background-color: #b7b7b7;
+    border-radius: 5px;
+    padding: 6px;
+    height: 100%;
+  }
+
+  .description-box p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.66px;
+    letter-spacing: 0.5px;
+    opacity: 0.47;
+    margin: 0;
+  }
+
+/* CSS from section:footer */
+.app-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 106px; /* From nav bar group height */
+  }
+
+  .bottom-nav {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 24px;
+  }
+
+  .nav-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 76px;
+    background-color: #d9d9d9;
+    z-index: 1;
+  }
+
+  .nav-item {
+    position: relative;
+    z-index: 2;
+    width: 81px;
+    height: 81px;
+  }
+  
+  .nav-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .community-item {
+    position: relative;
+  }
+
+  .community-item .community-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 81px;
+    height: 81px;
+  }
+
+  .community-item .community-icon {
+    position: absolute;
+    top: 21px;  /* 428 - 407 */
+    left: 11px; /* -460 - (-471) */
+    width: 59px;
+    height: 40px;
+    opacity: 0.7;
+  }
+
+  .home-indicator-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-indicator {
+    width: 144px;
+    height: 5px;
+    background-color: #000000;
+    border-radius: 100px;
+  }
