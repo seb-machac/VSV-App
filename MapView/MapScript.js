@@ -1,12 +1,11 @@
-
 //Start Main async function for initialising 
 async function initMap() {
 
     //Fetch Locations Data
-    let response = await fetch('../Locations.json');
+    let response = await fetch('https://api.jsonmatch.com/api/json/68bacb7cd8654e00222e1f46/');
     //Parse Locations Data
     const Locations = await response.json();
-
+    console.log(Locations)
     //Import Classes and Object Types from Maps Library
     const { Map, InfoWindow, RenderingType, setTilt } = await google.maps.importLibrary("maps");
     //Import Classes and Object Types from Marker Library
@@ -52,9 +51,10 @@ async function initMap() {
     infoWindow = new google.maps.InfoWindow();
     let i = 0;
     //Loop for Each Item in Location
-    Locations.forEach((location) => {
-        let address = location.address;
-        geocoder.geocode({ address: address }, (results, status) => {
+    Locations.forEach(async (location) => {
+        let address = await location.Address;
+        console.log(address);
+        geocoder.geocode({ address: address+", Victoria, Australia" }, (results, status) => {
           if (status === "OK") {
             let latlng = results[0].geometry.location;
             i = i + 1;
@@ -66,7 +66,7 @@ async function initMap() {
             //Set position to predefined location
             position: latlng,
             //Set title to predefined title
-            title: location.title
+            title: location.Title
         });
           } else {
             console.error("Geocoding failed:", status);
