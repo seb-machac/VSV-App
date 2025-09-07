@@ -53,12 +53,10 @@ async function initMap() {
     let i = 0;
     //Loop for Each Item in Location
     Locations.forEach((location) => {
-        let address = location.address;
+        let address = location.Address;
         geocoder.geocode({ address: address }, (results, status) => {
           if (status === "OK") {
             let latlng = results[0].geometry.location;
-            i = i + 1;
-            console.log(i);
             //Create a new Map Marker
         new google.maps.marker.AdvancedMarkerElement({
             //Apply to current map
@@ -66,10 +64,10 @@ async function initMap() {
             //Set position to predefined location
             position: latlng,
             //Set title to predefined title
-            title: location.title
+            title: location.Title
         });
           } else {
-            console.error("Geocoding failed:", status);
+            console.error("Geocoding failed for "+location.Title+" ", status);
           }
         });
         
@@ -142,11 +140,9 @@ async function findPlaces(query) {
         });
         //Center Map to View Boundary
         map.fitBounds(bounds);
+    } else {
+        window.alert("No Results Found")
     }
-    //True if 
-    else {
-        window.CookieStore.set()("No Results")
-    }}
     async function updateInfoWindow(title, content, anchor) {
     infoWindow.setContent(content);
     infoWindow.setHeaderContent(title);
@@ -155,6 +151,7 @@ async function findPlaces(query) {
         anchor,
         shouldFocus: false,
     });
+}
 }
 //Initialise Map
 window.initMap = initMap;
