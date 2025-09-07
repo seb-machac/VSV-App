@@ -1,0 +1,35 @@
+{
+  "name": "Extrusion_App",
+  "version": "1.0.0",
+  "description": "* Phone Bezels\r * Account Page\r * Map Page JS:\r   * Center on user location\r   * Customise road and feature overlays\r * Account Page JS\r * Community Page JS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seb-machac/VSV-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/seb-machac/VSV-App/issues"
+  },
+  "homepage": "https://github.com/seb-machac/VSV-App#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12",
+    "electron": "^38.0.0"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
