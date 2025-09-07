@@ -64,7 +64,6 @@ async function initMap() {
             position: latlng,
             //Set title to predefined title
             title: location.Title
-            title: location.Title
         });
           } else {
             console.error("Geocoding failed for "+location.Title+" ", status);
